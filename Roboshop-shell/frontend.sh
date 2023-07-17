@@ -1,7 +1,7 @@
 echo -e "\e[33mInstalling Nginx\e[0m"
 yum install nginx -y &>> /tmp/ngnix.log
 
-echo -e "\e[33enabling ngnix and starting\e[0m"
+echo -e "\e[33menabling ngnix and starting\e[0m"
 systemctl enable nginx &>> /tmp/ngnix.log
 systemctl start nginx &>> /tmp/ngnix.log
 
