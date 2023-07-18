@@ -5,6 +5,7 @@ Description=Shipping Service
 User=roboshop
 Environment=CART_ENDPOINT=cart-dev.sarathjakkula.cloud:8080
 Environment=DB_HOST=mysql-dev.sarathjakkula.cloud
+ExecStart=/bin/java -jar /app/shipping.jar
 SyslogIdentifier=shipping
 
 [Install]
