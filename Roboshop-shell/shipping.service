@@ -1,0 +1,11 @@
+[Unit]
+Description=Shipping Service
+
+[Service]
+User=roboshop
+Environment=CART_ENDPOINT=cart-dev.sarathjakkula.cloud:8080
+Environment=DB_HOST=mysql-dev.sarathjakkula.cloud
+SyslogIdentifier=shipping
+
+[Install]
+WantedBy=multi-user.target
