@@ -31,7 +31,7 @@ echo -e "${color}Loading Schema${nocolor}"
 mysql -h mysql-dev.sarathjakkula.cloud -uroot -pRoboShop@1 </app/schema/shipping.sql &>> ${log_file}
 
 echo -e "${color}Copying service file${nocolor}"
-cp /home/centos/Devops/Roboshop-shell/shipping.service /etc/systemd/system/shipping.service &>> ${log_file}
+cp /home/centos/DevOps/Roboshop-shell/shipping.service /etc/systemd/system/shipping.service &>> ${log_file}
 
 echo -e "${color}Enabling systemd service${nocolor}"
 systemctl daemon-reload &>> ${log_file}
