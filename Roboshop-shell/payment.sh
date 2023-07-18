@@ -22,7 +22,7 @@ cd /app
 pip3.6 install -r requirements.txt &>> ${log_file}
 
 echo -e "${color}Copying service files${nocolor}"
-cp /home/centos/Devops/Roboshop-shell/payment.service /etc/systemd/system/payment.service &>> ${log_file}
+cp /home/centos/DevOps/Roboshop-shell/payment.service /etc/systemd/system/payment.service &>> ${log_file}
 
 echo -e "${color}Enabling systemd service${nocolor}"
 systemctl daemon-reload &>> ${log_file}
