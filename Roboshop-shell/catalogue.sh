@@ -42,4 +42,4 @@ echo -e "${color}Installing Mongodb client${nocolor}"
 yum install mongodb-org-shell -y &>> ${log_file}
 
 echo -e "${color}Load Schema${nocolor}"
-mongo --host mongodb-dev.sarathjakkula.cloud </app/schema/catalogue.js &>> ${log_file}
+mongo --host mongodb-dev.sarathjakkula.cloud <${app_path}/schema/$component.js &>> ${log_file}
