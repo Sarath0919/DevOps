@@ -8,7 +8,7 @@ echo -e "${color}Installing Nodejs${nocolor}"
 yum install nodejs -y &>> ${log_file}
 
 echo -e "${color}Adding cart${nocolor}"
-cartadd roboshop
+useradd roboshop
 
 echo -e "${color}Creating application directory${nocolor}"
 rm -rf /app &>> ${log_file}
