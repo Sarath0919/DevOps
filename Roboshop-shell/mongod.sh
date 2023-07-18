@@ -13,7 +13,7 @@ systemctl start mongod &>> ${log_file}
 
 echo -e "${color}Changing listner${nocolor}"
 cd /
-sed -i "s/127.0.0.1/0.0.0.0" /etc/mongod.conf &>> ${log_file}
+sed -i "s/127.0.0.1/0.0.0.0/" /etc/mongod.conf &>> ${log_file}
 
 echo -e "${color}Restarting server${nocolor}"
 systemctl restart mongod &>> ${log_file}
