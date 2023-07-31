@@ -3,12 +3,20 @@ color="\e[35m"
 nocolor="\e[0m"
 app_path="/app"
 
+user_id=$(id -u)
+
+if [$user_id -ne 0]; then
+    echo Script should be running with sudo
+    exit 1
+fi
+
 start_check() {
     
     if [$1 -eq 0]; then
        echo SUCCESS
     else
        echo FAILURE
+       exit 1
     fi
 }
 
@@ -90,7 +98,7 @@ mysql_schema_setup() {
     start_check $?
 
     echo -e "${color}Loading Schema${nocolor}"
-    mysql -h mysql-dev.sarathjakkula.cloud -uroot -pRoboShop@1 <${app_path}/schema/${component}.sql &>> ${log_file}
+    mysql -h mysql-dev.sarathjakkula.cloud -uroot -p${mysql_root_pwd} <${app_path}/schema/${component}.sql &>> ${log_file}
     start_check $?
 
 }
