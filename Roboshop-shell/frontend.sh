@@ -19,7 +19,6 @@ cd /usr/share/nginx/html &>> ${log_file}
 unzip /tmp/${component}.zip  &>> ${log_file}
 
 echo -e "${color}Copying config file${nocolor}"
-
 cp /home/centos/DevOps/Roboshop-shell/roboshop.config  /etc/nginx/default.d/roboshop.conf &>> ${log_file}
 
 
